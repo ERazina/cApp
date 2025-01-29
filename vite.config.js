@@ -1,9 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-var __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 export default defineConfig({
     plugins: [react()],
+    base: "/CApp/",
+    build: {
+        outDir: "dist",
+      },
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "src"),

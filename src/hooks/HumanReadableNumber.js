@@ -1,13 +1,13 @@
 import { useCallback } from "react";
 function useHumanReadableNumber() {
-    var formatNumber = useCallback(function (value) {
+    const formatNumber = useCallback((value) => {
         if (typeof value === "number") {
             return value.toString().includes("e")
                 ? value.toFixed(10).replace(/\.?0+$/, "")
                 : value;
         }
         if (typeof value === "string") {
-            var number = parseFloat(value);
+            const number = parseFloat(value);
             if (isNaN(number)) {
                 return value;
             }

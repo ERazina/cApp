@@ -1,4 +1,4 @@
 import { ratesStore } from "./RatesStore";
-export var stores = {
-    ratesStore: ratesStore,
+export const stores = {
+    ratesStore,
 };
